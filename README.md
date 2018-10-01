@@ -43,6 +43,7 @@ const lineMax = 3
 NSSEllipsis.update(element, lineMax)
 ```
 ```js
+// it's Responsive Baby!!!
 const lineMax = 2;
 const onResize = function() {
   [...document.querySelectorAll(".to-ellipsis")].map(element => {
