@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NSSellipsis Yeahhh!</title>
+    <script async src="../dist/nss-ellipsis.common.js"></script>
+    <style>
+    .to-ellipsis{
+        margin: 100px 300px;
+        display: block;
+    }
+    </style>
+</head>
+<body onload="etBim()">
+<div class="to-ellipsis">Our MH40 Over Ear Headphones are designed to be modern thinking caps: tools to help focus, inspire, and transport your mind. Designed for decades of use, our headphones are built with only the finest materials and tuned to provide a rich, warm sound. They make an elegant yet everyday addition to your desk, studio or home Our MH40 Over Ear Headphones are designed to be modern thinking caps: tools to help focus, inspire, and transport your mind. Designed for decades of use, our headphones are built with only the finest materials and tuned to provide a rich, warm sound. They make an elegant yet everyday addition to your desk, studio or home Our MH40 Over Ear Headphones are designed to be modern thinking caps: tools to help focus, inspire, and transport your mind. Designed for decades of use, our headphones are built with only the finest materials and tuned to provide a rich, warm sound. They make an elegant yet everyday addition to your desk, studio or homeOur MH40 Over Ear Headphones are designed to be modern thinking caps: tools to help focus, inspire, and transport your mind. Designed for decades of use, our headphones are built with only the finest materials and tuned to provide a rich, warm sound. They make an elegant yet everyday addition to your desk, studio or home</div>
+<script>
+    const etBim = function () {
+        const lineMax = 2;
+        const onResize = function() {
+          [...document.querySelectorAll(".to-ellipsis")].map(element => {
+            NSSEllipsis.update(element, 3)
+          })
+        }
+        window.addEventListener('resize', onResize)
+        onResize()
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "root": true,
+    "parser": "babel-eslint",
+    "extends": [
+      "airbnb"
+    ],
+    "env": {
+      "es6": true,
+      "browser": true
+    },
+    "settings": {
+      "import/resolver": {
+        "babel-module": {}
+      }
+    },
+    "globals": {
+      "__VERSION__": false
+    },
+    "rules": {
+      "no-console": "off",
+      "no-param-reassign": "off"
+    }
+}
+
