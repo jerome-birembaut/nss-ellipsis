@@ -1,8 +1,5 @@
 
-[![npm version](https://badge.fury.io/js/nss-console.svg)](https://badge.fury.io/js/nss-console)
-# NSS-Console
-your chrome console is now super cool
-=============
+[![npm version](https://badge.fury.io/js/nss-ellipsis.svg)](https://badge.fury.io/js/nss-ellipsis)
 
 With NSS-Ellipsis you can add ellipsis to multiline text 
 
