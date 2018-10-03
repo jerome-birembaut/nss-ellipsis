@@ -2,7 +2,8 @@
 [![npm version](https://badge.fury.io/js/nss-ellipsis.svg)](https://badge.fury.io/js/nss-ellipsis)
 
 With NSS-Ellipsis you can add ellipsis to multiline text 
-
+### DEMO on codepen ###
+[r2h]: https://codepen.io/Seraf_NSS/pen/rqVbJw
 
 ### Setup ###
 
