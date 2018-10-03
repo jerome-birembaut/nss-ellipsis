@@ -3,7 +3,7 @@
 
 With NSS-Ellipsis you can add ellipsis to multiline text 
 ### DEMO on codepen ###
-[r2h]: https://codepen.io/Seraf_NSS/pen/rqVbJw
+[a link](https://codepen.io/Seraf_NSS/pen/rqVbJw)
 
 ### Setup ###
 
