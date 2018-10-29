@@ -18,7 +18,7 @@
         const lineMax = 2;
         const onResize = function() {
           [...document.querySelectorAll(".to-ellipsis")].map(element => {
-            NSSEllipsis.update(element, 3)
+            NSSEllipsis.update(element, 3, NSSEllipsis.LETTER_PRECISION)
           })
         }
         window.addEventListener('resize', onResize)

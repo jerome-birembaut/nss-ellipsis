@@ -19,6 +19,8 @@ The correct way to import NSS-Ellipsis is:
 ```js
 import NSSEllipsis from 'nss-ellipsis'
 NSSEllipsis.update(element, 3)
+// to set precision to letter
+NSSEllipsis.update(element, 3, NSSEllipsis.LETTER_PRECISION)
 ```
 
 Using common file:
@@ -33,7 +35,9 @@ https://github.com/jerome-birembaut/nss-ellipsis/releases/tag/0.0.1
 
 ### Current features ###
 
-- ellipsis a dom element
+- ellipsis a dom element (yeah)
+- lineMax
+- precision to word or letter
 
 ### Basic Usage Example ###
 
