@@ -140,7 +140,7 @@ function () {
       }
 
       element.innerHTML = 'a';
-      var lineHeight = element.getBoundingClientRect().height;
+      var lineHeight = parseInt(element.getBoundingClientRect().height);
       element.innerHTML = '';
       var changeCount = 0;
       var index = 0;
@@ -156,7 +156,7 @@ function () {
         tempText = element.innerHTML;
         element.innerHTML = tempText.substring(0, tempText.length - 1);
         element.innerHTML = element.innerHTML.replace(/\s+$/, '') + '...';
-        currHeight = element.getBoundingClientRect().height;
+        currHeight = parseInt(element.getBoundingClientRect().height);
         element.innerHTML = tempText;
 
         if (currHeight !== lastHeight) {
@@ -167,7 +167,7 @@ function () {
             element.innerHTML = prevText.substring(0, prevText.length - 1);
             element.innerHTML = element.innerHTML.replace(/\s+$/, '') + '...';
             lastHeight = currHeight;
-            currHeight = element.getBoundingClientRect().height; // if adding ... add a new line
+            currHeight = parseInt(element.getBoundingClientRect().height); // if adding ... add a new line
 
             if (currHeight !== lastHeight) {
               var ar = prevText.split(_precision);
@@ -178,7 +178,7 @@ function () {
               for (var i = 0; i < ar.length - 1; i++) {
                 prevText = element.innerHTML;
                 element.innerHTML += ar[i] + _precision;
-                currHeight = element.getBoundingClientRect().height;
+                currHeight = parseInt(element.getBoundingClientRect().height);
 
                 if (currHeight !== lastHeight) {
                   changeCount2++;
@@ -192,11 +192,11 @@ function () {
               }
 
               prevText = element.innerHTML;
-              currHeight = element.getBoundingClientRect().height;
+              currHeight = parseInt(element.getBoundingClientRect().height);
               element.innerHTML = prevText.substring(0, prevText.length - 1);
               element.innerHTML = element.innerHTML.replace(/\s+$/, '') + '...';
 
-              if (currHeight !== element.getBoundingClientRect().height && changeCount2 > lineMax - 1) {
+              if (currHeight !== parseInt(element.getBoundingClientRect().height) && changeCount2 > lineMax - 1) {
                 element.innerHTML = prevText;
               }
             }

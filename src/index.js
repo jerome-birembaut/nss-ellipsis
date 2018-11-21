@@ -9,7 +9,7 @@ class NSSEllipsis {
       element.textInit = txt
     }
     element.innerHTML = 'a'
-    const lineHeight = element.getBoundingClientRect().height
+    const lineHeight = parseInt(element.getBoundingClientRect().height)
     element.innerHTML = ''
     let changeCount = 0
     let index = 0
@@ -24,7 +24,7 @@ class NSSEllipsis {
       tempText = element.innerHTML
       element.innerHTML = tempText.substring(0, tempText.length-1)
       element.innerHTML = element.innerHTML.replace(/\s+$/, '') + '...'
-      currHeight = element.getBoundingClientRect().height
+      currHeight = parseInt(element.getBoundingClientRect().height)
 
       element.innerHTML = tempText
       if (currHeight !== lastHeight) {
@@ -34,7 +34,7 @@ class NSSEllipsis {
           element.innerHTML = prevText.substring(0, prevText.length-1)
           element.innerHTML = element.innerHTML.replace(/\s+$/, '') + '...'
           lastHeight = currHeight
-          currHeight = element.getBoundingClientRect().height
+          currHeight = parseInt(element.getBoundingClientRect().height)
           // if adding ... add a new line
           if(currHeight !== lastHeight) {
             const ar = prevText.split(_precision)
@@ -44,7 +44,7 @@ class NSSEllipsis {
             for(let i = 0; i < ar.length-1; i++) {
               prevText = element.innerHTML
               element.innerHTML += ar[i] + _precision
-              currHeight = element.getBoundingClientRect().height
+              currHeight = parseInt(element.getBoundingClientRect().height)
               if (currHeight !== lastHeight) {
                 changeCount2 ++
               }
@@ -54,10 +54,10 @@ class NSSEllipsis {
               }
             }
             prevText = element.innerHTML
-            currHeight = element.getBoundingClientRect().height
+            currHeight = parseInt(element.getBoundingClientRect().height)
             element.innerHTML = prevText.substring(0, prevText.length-1)
             element.innerHTML = element.innerHTML.replace(/\s+$/, '') + '...'
-            if (currHeight !== element.getBoundingClientRect().height && changeCount2 > lineMax-1) {
+            if (currHeight !== parseInt(element.getBoundingClientRect().height) && changeCount2 > lineMax-1) {
               element.innerHTML = prevText
             }
           }
