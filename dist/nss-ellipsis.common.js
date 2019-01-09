@@ -130,12 +130,20 @@ function () {
         element.textInit = txt;
       }
 
+      var lastHeight = parseInt(element.getBoundingClientRect().height);
       element.innerHTML = 'a';
       var lineHeight = parseInt(element.getBoundingClientRect().height);
+
+      if (lastHeight <= lineHeight * lineMax) {
+        element.innerHTML = _text; // console.log('no need to use ellipsis here', _text)
+
+        return;
+      }
+
       element.innerHTML = '';
       var changeCount = 0;
       var index = 0;
-      var lastHeight = 0;
+      lastHeight = 0;
       var currHeight;
       var prevText = '';
       var tempText = '';

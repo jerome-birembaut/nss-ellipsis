@@ -8,12 +8,18 @@ class NSSEllipsis {
     if (element.textInit == undefined) {
       element.textInit = txt
     }
+    let lastHeight = parseInt(element.getBoundingClientRect().height)
     element.innerHTML = 'a'
     const lineHeight = parseInt(element.getBoundingClientRect().height)
+    if(lastHeight <= lineHeight * lineMax){
+      element.innerHTML = _text
+      // console.log('no need to use ellipsis here', _text)
+      return
+    }
     element.innerHTML = ''
     let changeCount = 0
     let index = 0
-    let lastHeight = 0
+    lastHeight = 0
     let currHeight
     let prevText = ''
     let tempText = ''

@@ -31,7 +31,7 @@ Using common file:
 #### Latest Release can be downloaded here
 
 ```html
-https://github.com/jerome-birembaut/nss-ellipsis/releases/tag/0.0.8
+https://github.com/jerome-birembaut/nss-ellipsis/releases/tag/0.0.9
 ```
 
 ### Current features ###
