@@ -5,16 +5,17 @@ class NSSEllipsis {
     }
     _text =  (_text != null) ? _text : element.innerHTML
     const txt = _text.replace(/(\r\n\t|\n|\r\t)/gm," ").replace(/  +/g, ' ').split(_precision)
-    if (element.textInit == undefined) {
-      element.textInit = txt
-    }
+
     let lastHeight = parseInt(element.getBoundingClientRect().height)
     element.innerHTML = 'a'
     const lineHeight = parseInt(element.getBoundingClientRect().height)
-    if(lastHeight <= lineHeight * lineMax){
+    if(lastHeight <= lineHeight * lineMax && element.textInit === undefined){
       element.innerHTML = _text
       // console.log('no need to use ellipsis here', _text)
       return
+    }
+    if (element.textInit === undefined) {
+      element.textInit = txt
     }
     element.innerHTML = ''
     let changeCount = 0
